@@ -24,3 +24,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.cta-button.outline {
+  background: transparent;
+  border: 2px solid var(--secondary-blue);
+  color: var(--secondary-blue);
+}
+.cta-button.outline:hover {
+  background: var(--secondary-blue);
+  color: #fff;
+}
+.cta-button.solid {
+  background: var(--secondary-blue);
+  border: 2px solid var(--secondary-blue);
+  color: #fff;
+}
+.border-red-500 {
+  border-color: #f56565 !important;
+}
+.footer .tagline {
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+}
