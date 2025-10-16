@@ -1,5 +1,6 @@
 import TypedText from "@/app/components/ui/TypedText";
 import CountUp from "@/app/components/ui/CountUp";
+import HeroVisual from "@/app/components/ui/HeroVisual";
 import { fadeIn } from "@/app/lib/animations";
 import ClientOnly from "@/app/components/providers/client-only";
 
@@ -76,9 +77,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="hero-visual ">
-          <div className="performance-card"></div>
-        </div>
+        <HeroVisual />
       </div>
     </section>
   );
