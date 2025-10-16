@@ -1,32 +1,28 @@
-import anime from "animejs";
+import { animate } from 'animejs';
 
 export const fadeIn = (
   target: string | HTMLElement,
-  opts?: anime.AnimeParams
+  opts?: Parameters<typeof animate>[1]
 ) =>
-  anime({
-    target, // ← fixed typo
+  animate(target, {
     opacity: [0, 1],
     translateY: [30, 0],
     duration: 800,
-    easing: "easeOutQuart",
+    easing: 'easeOutQuart',
     ...opts,
   });
 
 export const countUp = (
   el: HTMLElement,
   to: number,
-  { duration = 2000, suffix = "" } = {}
+  { duration = 2000, suffix = '' } = {}
 ) => {
-  // typed proxy object
   const obj = { val: 0 };
-
-  anime({
-    targets: obj,
+  animate(obj, {
     val: to,
     duration,
     round: 1,
-    easing: "easeOutQuart",
+    easing: 'easeOutQuart',
     update: () => (el.textContent = `${obj.val}${suffix}`),
   });
 };

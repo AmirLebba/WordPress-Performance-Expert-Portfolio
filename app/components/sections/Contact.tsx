@@ -1,5 +1,5 @@
-import ContactHeader from '@/components/ui/ContactHeader';
-import ContactForm from '@/components/ui/ContactForm';
+import ContactHeader from '@/app/components/ui/ContactHeader';
+import ContactForm from '@/app/components/ui/ContactForm';
 
 export default function Contact() {
   return (

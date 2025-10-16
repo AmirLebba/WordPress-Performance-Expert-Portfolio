@@ -1,5 +1,5 @@
 'use client';
-import { CaseStudy } from '@/lib/types';
+import { CaseStudy } from '@/app/lib/types';
 
 interface Props {
   study: CaseStudy;

@@ -1,8 +1,7 @@
-import TypedText from '@/components/ui/TypedText';
-import StatCounter from '@/components/ui/StatCounter';
-import ProgressBar from '@/components/ui/ProgressBar';
-import { fadeIn } from '@/lib/animations';
-import ClientOnly from '@/components/providers/client-only';
+import TypedText from "@/app/components/ui/TypedText";
+import CountUp from "@/app/components/ui/CountUp";
+import { fadeIn } from "@/app/lib/animations";
+import ClientOnly from "@/app/components/providers/client-only";
 
 export default function Hero() {
   return (
@@ -11,47 +10,74 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title" data-splitting>
-            Transform Your WordPress Site into a{' '}
+            Transform Your WordPress Site into a{" "}
             <ClientOnly>
-              <TypedText strings={['Speed Machine', 'Performance Powerhouse', 'Conversion Engine', 'SEO Champion']} />
+              <TypedText
+                strings={[
+                  "Speed Machine",
+                  "Performance Powerhouse",
+                  "Conversion Engine",
+                  "SEO Champion",
+                ]}
+              />
             </ClientOnly>
           </h1>
 
           <p className="hero-subtitle">
-            Professional WordPress performance optimization services. Guaranteed 90+ PageSpeed scores...
+            Professional WordPress performance optimization services. Guaranteed
+            90+ PageSpeed scores...
           </p>
 
-          <div className="hero-stats">
+          <div className="hero-stats fade-in">
             <div className="stat-item">
-              <ClientOnly>
-                <StatCounter target={247} className="stat-number" />
-              </ClientOnly>
+              <CountUp
+                from={0}
+                to={247}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text stat-number"
+              />
               <span className="stat-label">Sites Optimized</span>
             </div>
             <div className="stat-item">
-              <ClientOnly>
-                <StatCounter target={340} suffix="%" className="stat-number" />
-              </ClientOnly>
+              <span className=" stat-number">
+                <CountUp
+                  from={0}
+                  to={340}
+                  separator="%"
+                  direction="up"
+                  duration={1}
+                  className="count-up-text "
+                />
+                %
+              </span>
               <span className="stat-label">Avg. Speed Increase</span>
             </div>
             <div className="stat-item">
-              <ClientOnly>
-                <StatCounter target={98} suffix="%" className="stat-number" />
-              </ClientOnly>
+              <span className=" stat-number">
+                <CountUp
+                  from={0}
+                  to={98}
+                  separator="%"
+                  direction="up"
+                  duration={1}
+                  className="count-up-text "
+                />
+                %
+              </span>
+
               <span className="stat-label">Client Satisfaction</span>
             </div>
           </div>
 
-          <a href="#contact" className="cta-button">Get Your Free Site Audit</a>
+          <a href="#contact" className="cta-button">
+            Get Your Free Site Audit
+          </a>
         </div>
 
-        <div className="hero-visual">
-          <div className="performance-card">
-            {/* ... static card content ... */}
-            <ClientOnly>
-              <ProgressBar />
-            </ClientOnly>
-          </div>
+        <div className="hero-visual ">
+          <div className="performance-card"></div>
         </div>
       </div>
     </section>

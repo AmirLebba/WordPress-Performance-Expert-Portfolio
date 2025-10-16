@@ -1,5 +1,5 @@
 'use client';
-import { Service } from '@/lib/types';
+import { Service } from '@/app/lib/types';
 
 interface Props {
   service: Service;

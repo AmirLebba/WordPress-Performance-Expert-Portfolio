@@ -1,5 +1,5 @@
-import CaseStudyCard from '@/components/ui/CaseStudyCard';
-import { CaseStudy } from '@/lib/types';
+import CaseStudyCard from '@/app/components/ui/CaseStudyCard';
+import { CaseStudy } from '@/app/lib/types';
 
 const STUDIES: CaseStudy[] = [
   {

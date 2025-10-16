@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { fakeAudit } from '@/lib/speed-test';
-import { SpeedAudit } from '@/lib/types';
+import { fakeAudit } from '@/app/lib/speed-test';
+import { SpeedAudit } from '@/app/lib/types';
 
 export default function SpeedTestWidget() {
   const [url, setUrl]   = useState('');
@@ -73,7 +73,7 @@ export default function SpeedTestWidget() {
 // tiny helper
 function ScoreBox({ value, label }: { value: string | number; label: string }) {
   return (
-    <div className="text-center p-5 bg-bg-light rounded-lg">
+    <div className="text-center p-5 bg-light rounded-lg">
       <div className="text-3xl font-bold text-accent-green">{value}</div>
       <div className="text-sm text-text-gray">{label}</div>
     </div>

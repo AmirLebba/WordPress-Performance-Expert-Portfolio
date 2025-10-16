@@ -11,10 +11,9 @@ export interface CaseStudy {
 
 export interface SpeedAudit {
   score: number;
-  loadTime: string; 
+  loadTime: string;
   issues: { text: string; ok: boolean }[];
 }
-
 
 export interface Service {
   icon: (props: { className?: string }) => React.ReactNode;
@@ -38,6 +37,13 @@ export interface SpeedAudit {
   score: number;
   loadTime: string;
   issues: { text: string; ok: boolean }[];
+}
+export interface ContactFormData {
+  name: string;
+  email: string;
+  website: string;
+  currentScore?: string;
+  challenge?: string;
 }
 export interface ContactFormData {
   name: string;

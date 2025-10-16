@@ -1,5 +1,5 @@
-import ToolsContent from '@/components/ui/ToolsContent';
-import SpeedTestWidget from '@/components/ui/SpeedTestWidget';
+import ToolsContent from '@/app/components/ui/ToolsContent';
+import SpeedTestWidget from '@/app/components/ui/SpeedTestWidget';
 
 export default function Tools() {
   return (

@@ -1,6 +1,6 @@
-import { Service } from '@/lib/types';
-import { Bolt, Clock, Layers } from '@/components/icons';
-import ServiceCard from '@/components/ui/ServiceCard';
+import { Service } from '@/app/lib/types';
+import { Bolt, Clock, Layers } from '@/app/components/ui/icons';
+import ServiceCard from '@/app/components/ui/ServiceCard';
 
 const SERVICES: Service[] = [
   {
