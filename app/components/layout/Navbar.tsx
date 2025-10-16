@@ -1,21 +1,24 @@
-'use client';
-import { useState } from 'react';
-import Link from 'next/link';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: 'Services', hash: '#services' },
-  { label: 'Case Studies', hash: '#case-studies' },
-  { label: 'Tools', hash: '#tools' },
-  { label: 'About', hash: '#about' },
-  { label: 'Contact', hash: '#contact' },
+  { label: "About", hash: "#about" },
+  { label: "Services", hash: "#services" },
+  { label: "Case Studies", hash: "#case-studies" },
+  { label: "Tools", hash: "#tools" },
+  { label: "Contact", hash: "#contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    hash: string
+  ) => {
     e.preventDefault();
-    document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 
@@ -23,7 +26,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         {/* Logo */}
-        <Link href="/" className="logo" onClick={(e) => handleClick(e, '#top')}>
+        <Link href="/" className="logo" onClick={(e) => handleClick(e, "#top")}>
           SpeedExpert
         </Link>
 
@@ -39,7 +42,11 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <a href="#contact" className="cta-button" onClick={(e) => handleClick(e, '#contact')}>
+        <a
+          href="#contact"
+          className="cta-button"
+          onClick={(e) => handleClick(e, "#contact")}
+        >
           Free Audit
         </a>
 

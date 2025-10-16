@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { animate } from "animejs";
+import CountUp from "@/app/components/ui/CountUp";
 
 export default function HeroVisual() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -45,7 +46,17 @@ export default function HeroVisual() {
       <div ref={cardRef} className="performance-card">
         <div className="performance-header">
           <h3 className="performance-title">Performance Score</h3>
-          <span className="performance-score">95</span>
+          <span className="performance-score">
+            <CountUp
+              from={0}
+              to={90}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text stat-number"
+              delay={1}
+            />
+          </span>
         </div>
 
         <div className="metrics-grid">

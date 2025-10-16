@@ -6,7 +6,7 @@ import ClientOnly from "@/app/components/providers/client-only";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="about">
       <div className="hero-background" id="heroCanvas" />
       <div className="hero-content">
         <div className="hero-text">

@@ -1,10 +1,10 @@
 import "./globals.css";
-import Navbar from "@/app/components/ui/Navbar";
-import Footer from "@/app/components/ui/Footer";
+import Navbar from "@/app/components/layout/Navbar";
+import Footer from "@/app/components/layout/Footer";
 
 
 export const metadata = {
-  title: "SpeedExpert – WordPress Performance Optimisation",
+  title: "SpeedExpert  WordPress Performance Optimisation",
   description:
     "Guaranteed 90+ PageSpeed scores and perfect Core Web Vitals. Free audit.",
 };
