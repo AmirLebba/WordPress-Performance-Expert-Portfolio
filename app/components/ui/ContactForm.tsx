@@ -29,7 +29,7 @@ export default function ContactForm() {
   } = useForm<ContactFormData>({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data: ContactFormData) => {
-    await new Promise((r) => setTimeout(r, 1500)); // fake POST
+    await new Promise((r) => setTimeout(r, 1500)); 
     setSubmitted(true);
     reset();
   };
